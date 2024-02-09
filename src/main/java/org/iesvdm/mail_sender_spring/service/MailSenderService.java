@@ -68,13 +68,13 @@ public class MailSenderService {
     @Async
     public void notificarPorEmail(Usuario usuario) {
 
-//Correo en modo texto
-//            emailService.send(emailSender,
-//                usuario.getEmail(),
-//                usuario.getNombre(),
-//                "Descripción:\n"
-//                        + "Blah, blah"
-//                );
+            //Correo en modo texto
+            //               this.send(emailSender,
+            //                usuario.getEmail(),
+            //                usuario.getNombre(),
+            //                "Descripción:\n"
+            //                        + "Blah, blah"
+            //                );
 
             Map<String, Object> templateModel = new HashMap<>();
 

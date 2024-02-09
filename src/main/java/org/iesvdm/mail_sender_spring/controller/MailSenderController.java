@@ -1,5 +1,6 @@
 package org.iesvdm.mail_sender_spring.controller;
 
+import jakarta.validation.Valid;
 import org.iesvdm.mail_sender_spring.domain.MensajeRespuesta;
 import org.iesvdm.mail_sender_spring.service.MailSenderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ public class MailSenderController {
     private MailSenderService mailSenderService;
 
     @PostMapping("/send-mail")
-    public MensajeRespuesta sennMail(@RequestBody Usuario usuario) {
+    public MensajeRespuesta sennMail(@Valid @RequestBody Usuario usuario) {
 
         this.mailSenderService.notificarPorEmail(usuario);
         return new MensajeRespuesta("Mensaje Enviado!");

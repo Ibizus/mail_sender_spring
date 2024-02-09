@@ -10,7 +10,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Usuario {
 
+    // Hemos metido @Valid en el controller. por lo que habria que utilizar las anotaciones de validacion en el modelo:
     private String nombre;
+
     private String email;
 
 }
